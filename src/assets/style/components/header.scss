@@ -1,0 +1,72 @@
+@import '~style/breakpoints';
+@import '~style/mixins';
+@import '~style/colors';
+
+.HeaderWrapper {
+  width: 100%;
+
+  background: $header-background;
+}
+
+.Header {
+  position: relative;
+
+  width: $mq-large;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  text-align: right;
+}
+
+.Logo {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 100;
+
+  margin: 0;
+  padding: 0;
+}
+
+.Menu {
+  list-style: none;
+  list-style-type: none;
+  list-style-image: none;
+
+  display: inline-block;
+
+  font-size: 0;
+}
+
+.MenuItem {
+  display: inline-block;
+
+  padding: 20px 20px;
+
+  background: none;
+  border-right: 1px solid $header-menu-border-side;
+  border-bottom: 2px solid transparent;
+
+  @include font-size(14px);
+
+  &:hover {
+    background: $header-menu-background;
+  }
+
+  &.MenuItem-Buy {
+    border-bottom-color: yellow;
+  }
+
+  &.MenuItem-Rent {
+    border-bottom-color: yellow;
+  }
+
+  &.MenuItem-Commercial {
+    border-bottom-color: yellow;
+  }
+
+  &:last-child {
+    border-right: none;
+  }
+}

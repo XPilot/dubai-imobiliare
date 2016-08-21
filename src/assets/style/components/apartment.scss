@@ -1,0 +1,47 @@
+@import '~style/breakpoints';
+@import '~style/mixins';
+@import '~style/colors';
+
+.APT-Presentation {
+  position: relative;
+}
+
+.APT-Presentation-Details {
+  list-style: none;
+  list-style-type: none;
+  list-style-image: none;
+
+  display: block;
+
+  width: 100%;
+  padding: 20px;
+
+  overflow: hidden;
+
+  background: #fff;
+  box-shadow: 0 0 5px 0 rgba(0,0,0,0.35);
+
+  font-size: 0;
+}
+
+.APT-Presentation-DetailsItem {
+  display: block;
+  margin: 0 10px;
+  float: left;
+
+  @include font-size(14px);
+
+  &:last-child {
+    float: right;
+  }
+}
+
+.APT-Presentation-Description {
+  .Reference {
+    width: 100%;
+
+    span {
+      
+    }
+  }
+}

@@ -31,22 +31,29 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="/assets/favicon/mstile-144x144.png">
   <meta name="theme-color" content="#ffffff">
+
+  <% /* if (webpackConfig.metadata.ENV === 'production') { */ %>
+   <link rel="stylesheet" href="/assets/css/style.css">
+ <% /* } */ %>
+
 </head>
 <body>
 <div class="App">
-  <div class="Header">
-    <h1 class="Logo">
-      <a href="#"><img src="/assets/images/logo.png" alt="Dubai Imobiliare"/></a>
-    </h1>
+  <div class="HeaderWrapper">
+    <div class="Header">
+      <h1 class="Logo">
+        <a href="#"><img src="/assets/images/logo.png" alt="Dubai Imobiliare"/></a>
+      </h1>
 
-    <ul class="Menu">
-      <li class="MenuItem MenuItem-Buy">Buy</li>
-      <li class="MenuItem MenuItem-Rent">Rent</li>
-      <li class="MenuItem MenuItem-Commercial">Commercial</li>
-      <li class="MenuItem MenuItem-Prestige">Prestige</li>
-      <li class="MenuItem MenuItem-Brokers">Brokers</li>
-      <li class="MenuItem MenuItem-Blog">Blog</li>
-    </ul>
+      <ul class="Menu">
+        <li class="MenuItem MenuItem-Buy">Buy</li>
+        <li class="MenuItem MenuItem-Rent">Rent</li>
+        <li class="MenuItem MenuItem-Commercial">Commercial</li>
+        <li class="MenuItem MenuItem-Prestige">Prestige</li>
+        <li class="MenuItem MenuItem-Brokers">Brokers</li>
+        <li class="MenuItem MenuItem-Blog">Blog</li>
+      </ul>
+    </div>
   </div>
 
   <div class="Contents">

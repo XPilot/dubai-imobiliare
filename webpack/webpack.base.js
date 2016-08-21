@@ -1,6 +1,7 @@
 /*eslint-disable */
 var path = require('path');
 var webpack = require('webpack');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -16,6 +17,17 @@ module.exports = {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development'),
       }
     }),
+
+    new CopyWebpackPlugin([
+      {
+        from: 'src/assets/images',
+        to: 'assets/images'
+      },
+      {
+        from: 'src/assets/favicon',
+        to: 'assets/favicon'
+      }
+    ]),
     new HtmlWebpackPlugin({
       template: 'src/index.html',
       filename: '../index.html',
@@ -39,6 +51,10 @@ module.exports = {
         loader: 'file-loader'
       },
       {
+        test: /\.(eot|svg|ttf|woff|woff2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'file-loader?name=assets/fonts/[name].[ext]'
+      },
+      {
         test: /\.svg$/,
         exclude: /font/,
         loader: 'svg-sprite?' + JSON.stringify({
@@ -55,10 +71,6 @@ module.exports = {
   resolve: {
     alias: {
       app: path.resolve(__dirname, '../src/app'),
-      components: path.resolve(__dirname, '../src/app/components'),
-      containers: path.resolve(__dirname, '../src/app/containers'),
-      decorators: path.resolve(__dirname, '../src/app/decorators'),
-      events: path.resolve(__dirname, '../src/app/events'),
       style: path.resolve(__dirname, '../src/assets/style'),
       images: path.resolve(__dirname, '../src/assets/images')
     },
