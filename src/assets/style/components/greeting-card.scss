@@ -1,0 +1,109 @@
+@import '~style/breakpoints';
+@import '~style/mixins';
+@import '~style/colors';
+
+.GreetingCard {
+  position: relative;
+
+  width: 100%;
+  padding: 10px;
+
+  background: #fff;
+  box-shadow: 0 0 8px 0px rgba(0,0,0,0.15);
+  overflow: hidden;
+}
+
+.GreetingCard-Photo {
+  float: left;
+
+  width: 85px;
+  margin-right: 10px;
+}
+
+.GreetingCard-Details {
+  float: left;
+
+  width: calc(100% - 95px);
+
+  color: $text-default;
+  @include font-size(12px);
+
+  h4 {
+    margin: 0 0 10px;
+    padding: 0;
+
+    color: $text-bold;
+    @include font-size(16px);
+    font-weight: 400;
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+
+    line-height: 16px;
+  }
+}
+
+.GreetingCard-Company {
+  width: calc(100%);
+
+  margin-top: 10px;
+  padding-bottom: 15px;
+}
+
+.GreetingCard-CompanyLogo {
+  width: 100%;
+
+  color: #fff;
+  @include font-size(20px);
+  text-transform: uppercase;
+
+  p {
+    display: inline-block;
+
+    margin: 0 -3px;
+    padding: 5px;
+
+    font-weight: 600;
+
+    vertical-align: top;
+
+      &:first-child {
+        margin-left: 0;
+
+        background: $greeting-card-color1;
+        border-radius: 0 0 0 5px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+
+        background: $greeting-card-color2;
+        border-radius: 0 5px 0 0;
+      }
+  }
+}
+
+.GreetingCard-CompanyTitle {
+  position: absolute;
+  transform: scale(0.7) translateX(-18px);
+  transform-origin: top left;
+
+  width: 300px;
+
+  color: #000;
+  @include font-size(12px);
+  font-weight: 600;
+
+  span {
+    color: $greeting-card-color1;
+    font-weight: 600;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+
+    &:last-child {
+      color: $greeting-card-color2;
+    }
+  }
+}

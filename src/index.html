@@ -187,9 +187,9 @@
           <h4>Jennifer Doe</h4>
           <p>
             The Reserve Agency LLC
-            <br /><br />
+            <br />
             Emaar Suqre
-            <br /><br />
+            <br />
             Downtown, Dubai, UAE
           </p>
 
@@ -198,7 +198,9 @@
               <p>LAND</p>
               <p>STERLING</p>
             </div>
-            Chartered Surveyors &amp; Property Consultants
+            <div class="GreetingCard-CompanyTitle">
+              <span>Chartered Surveyors</span> &amp; <span>Property Consultants</span>
+            </div>
           </div>
         </div>
       </div>
@@ -206,19 +208,19 @@
       <div class="ContactOptions">
         <label class="ContactOptions-Item">
           <input type="radio" name="ContactOptions-ItemControl" />
-          <p>Contact by phone</p>
+          <p><i class="fa fa-th" aria-hidden="true"></i> Contact by phone</p>
 
           <div class="ContactOptions-ItemData">
-            <p class="TelephoneNumber">055 123 45 67<p>
+            <p class="TelephoneNumber">055 123 45 67</p>
           </div>
         </label>
 
         <label class="ContactOptions-Item">
           <input type="radio" name="ContactOptions-ItemControl" />
-          <p>Contact by email</p>
+          <p><i class="fa fa-envelope" aria-hidden="true"></i> Contact by email</p>
 
           <div class="ContactOptions-ItemData">
-            <form classname="EmailContact ContactOptions-Form" name="email-contact" action="#">
+            <form class="ContactOptions-Form EmailContact" name="email-contact" action="#">
               <textarea></textarea>
               <input type="text" name="fullname" placeholder="Full Name">
               <input type="text" name="email" placeholder="Email address">
@@ -230,12 +232,14 @@
 
         <label class="ContactOptions-Item">
           <input type="radio" name="ContactOptions-ItemControl" />
-          <p>Make an offer</p>
+          <p><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Make an offer</p>
 
           <div class="ContactOptions-ItemData">
-            <form classname="OfferForm ContactOptions-Form" name="email-contact" action="#">
+            <form class="ContactOptions-Form OfferForm" name="email-contact" action="#">
               <p>Your offer</p>
-              <input type="text" name="fullname" placeholder="Full Name">
+              <div class="special-input">
+                <input type="text" name="offer" placeholder="">
+              </div>
               <span>only serious and resonable offers will be considered by the broker</span>
               <input type="text" name="fullname" placeholder="Full Name">
               <input type="text" name="email" placeholder="Email address">

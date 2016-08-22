@@ -1,0 +1,46 @@
+@import '~style/breakpoints';
+@import '~style/mixins';
+@import '~style/colors';
+
+.OfferActions {
+  list-style: none;
+  list-style-image: none;
+  list-style-type: none;
+
+  position: relative;
+
+  width: 100%;
+  padding: 5px;
+  margin: 20px 0 0 0;
+
+  background: #fff;
+  box-shadow: 0 0 8px 0px rgba(0,0,0,0.15);
+
+  color: $text-default;
+  @include font-size(16px);
+  text-transform: uppercase;
+
+  li {
+    position: relative;
+    padding: 20px 20px 20px 50px;
+
+    cursor: pointer;
+
+    transition:
+      background 0.3s ease-out,
+      color 0.3s ease-out;
+
+    &:hover {
+      background: $text-default;
+
+      color: $text-bold;
+    }
+  }
+
+  i {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+  }
+}

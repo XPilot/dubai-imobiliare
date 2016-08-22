@@ -1,0 +1,75 @@
+@import '~style/breakpoints';
+@import '~style/mixins';
+@import '~style/colors';
+
+.MarketPrice {
+  position: relative;
+
+  width: 100%;
+  margin: 20px 0 0 0;
+}
+
+.MarketPrice-Title {
+  margin: 0 0 10px 0;
+
+  color: $text-default;
+  @include font-size(16px);
+  font-weight: 400;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.MarketPrice-List {
+  list-style: none;
+  list-style-image: none;
+  list-style-type: none;
+
+  display: block;
+
+  position: relative;
+
+  width: 100%;
+  padding: 10px 10px 50px 10px;
+
+  background: #fff;
+  box-shadow: 0 0 8px 0px rgba(0,0,0,0.15);
+
+  li {
+    margin-top: 20px;
+    padding-bottom: 10px;
+
+    border-bottom: 1px solid $header-menu-border-bottom;
+
+    color: $contact-options-bg;
+    @include font-size(12px);
+    text-transform: uppercase;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    p {
+      margin: 0 0 0 0;
+
+      color: $text-bold;
+      @include font-size(14px);
+      text-transform: none;
+    }
+  }
+}
+
+.MarketPrice-Action {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+
+  padding: 5px 10px;
+
+  border: none;
+  background: $contact-options-bg;
+
+  color: #fff;
+  text-transform: uppercase;
+
+  cursor: pointer;
+}

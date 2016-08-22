@@ -1,0 +1,186 @@
+@import '~style/breakpoints';
+@import '~style/mixins';
+@import '~style/colors';
+
+.ContactOptions {
+  position: relative;
+
+  width: 100%;
+  margin-top: 20px;
+  padding: 0 5px 5px;
+
+  background: $contact-options-bg;
+}
+
+.ContactOptions-Item {
+  position: relative;
+
+  display: block;
+
+  padding: 0;
+  margin: 0;
+
+  border-top: 1px solid #fff;
+
+  color: #fff;
+  @include font-size(16px);
+  text-align: left;
+
+  cursor: pointer;
+
+  &:first-child {
+    border-top: none;
+
+    .ContactOptions-ItemData {
+      p {
+        padding: 10px 0;
+        text-align: center;
+      }
+    }
+  }
+
+  &:last-child {
+    p {
+      padding-bottom: 5px;
+    }
+  }
+
+  input[type='radio'] {
+    position: absolute;
+    z-index: -1;
+
+    opacity: 0;
+  }
+
+  i {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+  }
+
+  p {
+    position: relative;
+
+    display: block;
+
+    margin: 0;
+    padding: 10px;
+    padding-left: 50px;
+    text-transform: uppercase;
+  }
+}
+
+.ContactOptions-Item input:checked ~{
+  .ContactOptions-ItemData {
+    height: auto;
+    padding: 5px;
+
+    overflow: inherit;
+    visibility: visible;
+  }
+}
+
+.ContactOptions-ItemData {
+  height: 0px;
+  padding: 0px;
+
+  overflow: hidden;
+  visibility: hidden;
+
+  background: #fff;
+
+  color: $contact-options-bg;
+
+  p {
+    text-align: center;
+  }
+}
+
+.ContactOptions-Form {
+  display: block;
+
+  width: 100%;
+  @include font-size(14px);
+  text-align: left;
+
+  textarea {
+    width: 100%;
+
+    resize: vertical;
+
+    outline: none;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    margin-top: 10px;
+    padding: 5px;
+
+    outline: none;
+  }
+
+  button {
+    margin: 10px 0 0;
+    padding: 5px;
+
+    background: $text-bold;
+    border: none;
+    outline: none;
+
+    color: #fff;
+    text-transform: uppercase;
+  }
+}
+
+.OfferForm {
+  .special-input {
+    position: relative;
+
+    width: 100%;
+
+    &:after {
+      content: 'AED/year';
+
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+
+      width: 120px;
+      height: 100%;
+      padding: 8px 0 0;
+
+      background: $listing-summary-border-color;
+
+      color: $text-default;
+      text-align: center;
+    }
+
+    input {
+      margin-top: 0;
+      padding-right: 125px;
+    }
+  }
+
+  p {
+    padding: 0;
+    margin: 0;
+
+    color: $text-default;
+    @include font-size(12px);
+    font-weight: 600;
+    text-align: left;
+  }
+
+  span {
+    display: block;
+
+    margin-top: 5px;
+
+    color: $text-bold;
+    @include font-size(11px);
+    font-weight: 400;
+    line-height: 12px;
+  }
+}

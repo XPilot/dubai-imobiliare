@@ -3,13 +3,13 @@
 @import '~style/colors';
 
 .Banner-300x250 {
-  margin-bottom: 30px;
+  margin-top: 20px;
 
   p {
-    margin: 0 0 20px;
+    margin: 0 0 10px;
 
-    color: $text-default
-    @include font-size(16px);
+    color: $text-default;
+    @include font-size(14px);
     text-transform: uppercase;
   }
 }
