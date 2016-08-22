@@ -4,6 +4,8 @@
 
 .APT-Presentation {
   position: relative;
+
+  width: 100%;
 }
 
 .APT-Presentation-Details {
@@ -19,7 +21,7 @@
   overflow: hidden;
 
   background: #fff;
-  box-shadow: 0 0 5px 0 rgba(0,0,0,0.35);
+  box-shadow: 0 0 8px 0px rgba(0,0,0,0.15);
 
   font-size: 0;
 }
@@ -29,19 +31,127 @@
   margin: 0 10px;
   float: left;
 
+  color: $text-default;
   @include font-size(14px);
 
   &:last-child {
     float: right;
   }
+
+  strong {
+    color: $text-rent;
+    font-weight: 600;
+  }
 }
 
 .APT-Presentation-Description {
+  position: relative;
+
+  width: 100%;
+
   .Reference {
     width: 100%;
 
+    overflow: hidden;
+
+    color: $text-default;
+    @include font-size(16px);
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  .Reference-Title {
+    float: left;
+  }
+
+  .Reference-Ref {
+    float: right;
+
     span {
-      
+      color: $text-rent;
     }
   }
+}
+
+.APT-Presentation-DescriptionBody {
+  padding: 20px 10px;
+
+  background: #fff;
+  box-shadow: 0 0 8px 0px rgba(0,0,0,0.15);
+
+  color: $text-default;
+  @include font-size(16px);
+  font-weight: 300;
+
+  .APT-PDB-Location {
+    margin: 0;
+    padding: 0;
+
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .APT-PDB-Title {
+    margin: 20px 0 30px;
+
+    color: $text-bold;
+    @include font-size(24px);
+    font-weight: 400;
+  }
+}
+
+.APT-PDB-Listing {
+  position: relative;
+
+  margin-top: 40px;
+
+  .APT-PDB-ListingTitle {
+    margin-bottom: 10px;
+
+    text-transform: uppercase;
+  }
+
+  .APT-PDB-ListingList {
+    list-style: none;
+    list-style-image: none;
+    list-style-type:none;
+
+    margin: 0;
+    padding: 0;
+  }
+
+  .APT-PDB-ListingListItem {
+    display: block;
+
+    padding: 10px;
+
+    border-top: 1px solid $listing-summary-border-color;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    .ItemCell {
+      float: left;
+
+      width: 25%;
+
+      box-sizing: border-box;
+
+      @include font-size(14px);
+      font-weight: 400;
+      text-align: left;
+
+      vertical-align: top;
+
+      p {
+        margin: 5px 0 0;
+
+        color: $text-bold;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+slider {
+  display: none;
 }

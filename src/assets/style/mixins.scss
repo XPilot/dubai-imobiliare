@@ -9,6 +9,14 @@
   @return $n;
 }
 
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
 @mixin font-size($size: 1px) {
   $unitlessSize: strip-unit($size);
 

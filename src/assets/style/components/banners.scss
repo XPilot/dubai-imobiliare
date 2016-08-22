@@ -1,0 +1,15 @@
+@import '~style/breakpoints';
+@import '~style/mixins';
+@import '~style/colors';
+
+.Banner-300x250 {
+  margin-bottom: 30px;
+
+  p {
+    margin: 0 0 20px;
+
+    color: $text-default
+    @include font-size(16px);
+    text-transform: uppercase;
+  }
+}
