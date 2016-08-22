@@ -1,0 +1,27 @@
+.Slider {
+  position: relative;
+
+  display: block;
+
+  width: 100%;
+  height: 420px;
+}
+
+.SliderBar {
+  position: relative;
+
+  display: block;
+
+  width: 100%;
+  height: 80px;
+
+  background: rgba(0, 0, 0, 0.15);
+
+  text-align: center;
+
+  photo {
+    display: inline-block;
+
+    width: 14.28%;
+  }
+}
